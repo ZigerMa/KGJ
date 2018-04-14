@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HentaiManager : MonoBehaviour {
+public class HentaiManager  {
 
 	// Use this for initialization
 	void Start () {

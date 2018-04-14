@@ -5,7 +5,9 @@ using UnityEngine;
 public class Main : MonoBehaviour 
 {
     private static bool m_servicesInited = false;
-   
+    private MainGameTask m_MainGameTask;
+
+
     void Start()
     {
         InitGame();
@@ -23,8 +25,8 @@ public class Main : MonoBehaviour
 
             m_servicesInited = true;
         }
+        m_MainGameTask = gameObject.AddComponent<MainGameTask>();
     }
-
 
     private void TestMethod()
     {
