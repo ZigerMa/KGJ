@@ -1,0 +1,181 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public enum SnakeHeadDirection
+{
+    Up,
+    Down,
+    Left,
+    Right,
+}
+
+public class HeadController : MonoBehaviour
+{
+
+    public GameObject foodPrefab;
+    public GameObject bodyPrefab;
+
+    //第一節身體的參考引用
+    public Body _FirstBody;
+    //最後一節身體之參考引用
+    public Body _LastBody;
+
+    //Step1.先定義速度
+    public float speed;//移動之速 (m/s)
+    private float _Timer = 0f;
+
+    private SnakeHeadDirection _CurrentDir = SnakeHeadDirection.Up;//預設朝上
+    private SnakeHeadDirection _NextDir = SnakeHeadDirection.Up;//下一步移動方向
+
+    private bool _IsOver = false;
+
+    //Step3.食物生成
+    /// <summary>
+    /// Creates the food.
+    /// </summary>
+    
+
+
+    /// <summary>
+    /// Raises the trigger enter event.
+    /// </summary>
+    /// <param name="other">Other.</param>
+    public void OnTriggerEnter(Collider other)
+    {
+        //若碰到邊界 遊戲結束
+        if (other.tag.Equals("Bound"))
+        {
+            _IsOver = true;
+        }
+        //若碰到食物 ,將該食物除去 ,蛇身體增加一節
+        if (other.tag.Equals("kid"))
+        {
+            Destroy(other.gameObject);
+            Grow();
+           
+        }
+    }
+    //身體增長一節
+    private void Grow()
+    {
+        //先故意生成再螢幕看不到的位置 , 等觸碰到有食物Tag的物件 再位移
+        GameObject obj = Instantiate(bodyPrefab, new Vector3(1000f, 1000f, 1000f), Quaternion.identity) as GameObject;
+
+        Body b = obj.GetComponent<Body>();//取得身體 prefab上的腳本
+                                          //  如果頭部後面還未有身體
+        if (_FirstBody == null)
+        {
+            _FirstBody = b;//目前所生出的身體就是第一節身體部分
+        }
+        //若有最後一節身體
+        if (_LastBody != null)
+        {
+            _LastBody.next = b;//就將新創見的身體掛後頭
+        }
+        _LastBody = b;//更新最後一節身體部分
+    }
+
+    void Start()
+    {
+       
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //只要遊戲還未結束 , 就繼續執行更新遊戲循環
+        if (!_IsOver)
+        {
+            Turn();
+            Move();
+        }
+    }
+
+    //Step2.每隔一段時間往前移動一個單位
+    /// <summary>
+    /// Move this instance.
+    /// </summary>
+    private void Move()
+    {
+        _Timer += Time.deltaTime;
+        //判定當前的frame是否該移動
+        if (_Timer >= (1f / speed))
+        {
+            //讓蛇轉彎
+            switch (_NextDir)
+            {
+                case SnakeHeadDirection.Up:
+                    transform.forward = Vector3.forward;
+                    _CurrentDir = SnakeHeadDirection.Up;
+                    break;
+                case SnakeHeadDirection.Down:
+                    transform.forward = Vector3.back;
+                    _CurrentDir = SnakeHeadDirection.Down;
+                    break;
+                case SnakeHeadDirection.Left:
+                    transform.forward = Vector3.left;
+                    _CurrentDir = SnakeHeadDirection.Left;
+                    break;
+                case SnakeHeadDirection.Right:
+                    transform.forward = Vector3.right;
+                    _CurrentDir = SnakeHeadDirection.Right;
+                    break;
+            }
+            //紀錄頭部移動之前的位置
+            Vector3 nextPos = transform.position;
+
+            transform.Translate(Vector3.forward);//每frame都會移動一單位
+            _Timer = 0f;//Reset 計時器
+                        //如果有身體子部分 就讓它移動
+            if (_FirstBody != null)
+            {
+                //讓第一節身體移動
+                _FirstBody.Move(nextPos);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Turn this instance.
+    /// </summary>
+    private void Turn()
+    {
+        //在PC端先實踐 以鍵盤作為Input的移動
+        if (Input.GetKey(KeyCode.W))
+        {//上
+            _NextDir = SnakeHeadDirection.Up;
+            //判斷按鈕是否生效
+            if (_CurrentDir == SnakeHeadDirection.Down)
+            {//若按下之鍵盤值無效就修正
+                _NextDir = _CurrentDir;
+            }
+        }
+        if (Input.GetKey(KeyCode.S))
+        {//下
+            _NextDir = SnakeHeadDirection.Down;
+            //判斷按鈕是否生效
+            if (_CurrentDir == SnakeHeadDirection.Up)
+            {//若按下之鍵盤值無效就修正
+                _NextDir = _CurrentDir;
+            }
+        }
+        if (Input.GetKey(KeyCode.A))
+        {//左
+            _NextDir = SnakeHeadDirection.Left;
+            //判斷按鈕是否生效
+            if (_CurrentDir == SnakeHeadDirection.Right)
+            {//若按下之鍵盤值無效就修正
+                _NextDir = _CurrentDir;
+            }
+        }
+        if (Input.GetKey(KeyCode.D))
+        {//右
+            _NextDir = SnakeHeadDirection.Right;
+            //判斷按鈕是否生效
+            if (_CurrentDir == SnakeHeadDirection.Left)
+            {//若按下之鍵盤值無效就修正
+                _NextDir = _CurrentDir;
+            }
+        }
+    }
+}
