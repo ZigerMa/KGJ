@@ -1,33 +1,48 @@
-Assembly-CSharp.csproj
-RocketBall.sln
-Assembly-CSharp-firstpass.csproj
-RocketBall_GitHub.sln
-Library
-Temp
-obj/**
-Assembly-CSharp-Editor.csproj
+# Add any directories, files, or patterns you don't want to be tracked by version control
+# =============== #
+# Unity generated #
+# =============== #
+/Temp
+/Library
+/keystore
+/Apk
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+obj/
+*.svd
 *.userprefs
-Assembly-CSharp-Editor-firstpass.csproj
-RocketBall.userprefs
-Assets/Glyph Report.txt
-Assets/Glyph Report.txt.meta
-Assets/VSCode*
-.vscode
-.DS_Store
-*.suo
-RocketBall_Client.sln
-*.unityproj
-Assets/StreamingAssets/iOS
-Assets/StreamingAssets/Android
-Assets/StreamingAssets/Standalone*
-*.sln
-Assets/StreamingAssets/Android.meta
-Assets/StreamingAssets/iOS.meta
-Assets/StreamingAssets/build_info.txt
-Assets/StreamingAssets/build_info.txt.meta
-build
-Library_Android
-Library_iOS
-DataFiles/AssetBundles
 *.csproj
+*.pidb
+*.suo
+*.sln
+*.user
 *.unityproj
+*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Bin/
+sh.exe.stackdump
+
+
+!*.dll
+Assets/Scene/ooo.unity
+Assets/Scene/ooo.unity.meta
+Assets/Infinity Code/Online maps/Scripts/Interfaces.meta
+Assets/Plugins/Parse.Unity/Parse.Unity.sln.meta
+Assets/Plugins/Parse.Unity/Parse.Unity.userprefs.meta
+Assets/Plugins/NativeToolkitWP8.pdb.meta
+Assets/Plugins/Android/UnityShowAndroidStatusBar/bin.meta
+Assets/Plugins/WP8/NativeToolkitWP8.pdb.meta
+Assets/Scripts/Shader.meta
