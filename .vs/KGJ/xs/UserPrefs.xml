@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{65E9FB24-479A-AB4F-F31F-678877251BE7}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_William/Scripts/LoadingPage.cs">
+    <Files>
+      <File FileName="Assets/_William/Scripts/LoadingPage.cs" Line="72" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.KGJ PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
