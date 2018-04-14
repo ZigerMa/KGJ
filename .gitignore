@@ -1,0 +1,33 @@
+Assembly-CSharp.csproj
+RocketBall.sln
+Assembly-CSharp-firstpass.csproj
+RocketBall_GitHub.sln
+Library
+Temp
+obj/**
+Assembly-CSharp-Editor.csproj
+*.userprefs
+Assembly-CSharp-Editor-firstpass.csproj
+RocketBall.userprefs
+Assets/Glyph Report.txt
+Assets/Glyph Report.txt.meta
+Assets/VSCode*
+.vscode
+.DS_Store
+*.suo
+RocketBall_Client.sln
+*.unityproj
+Assets/StreamingAssets/iOS
+Assets/StreamingAssets/Android
+Assets/StreamingAssets/Standalone*
+*.sln
+Assets/StreamingAssets/Android.meta
+Assets/StreamingAssets/iOS.meta
+Assets/StreamingAssets/build_info.txt
+Assets/StreamingAssets/build_info.txt.meta
+build
+Library_Android
+Library_iOS
+DataFiles/AssetBundles
+*.csproj
+*.unityproj
