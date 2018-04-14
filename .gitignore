@@ -46,3 +46,7 @@ Assets/Plugins/NativeToolkitWP8.pdb.meta
 Assets/Plugins/Android/UnityShowAndroidStatusBar/bin.meta
 Assets/Plugins/WP8/NativeToolkitWP8.pdb.meta
 Assets/Scripts/Shader.meta
+.vs/kgj/v15/Server/sqlite3/db.lock
+*.ide
+*.ide-shm
+*.ide-wal
