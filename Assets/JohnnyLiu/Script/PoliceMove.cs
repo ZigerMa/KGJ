@@ -49,12 +49,16 @@ public class PoliceMove : MonoBehaviour {
 				{
 					FirstPoint.GetComponent<MovePoint> ().Left = NewPoint;
 					NewPoint.GetComponent<MovePoint> ().Right = FirstPoint;
+					FirstPoint.GetComponent<MovePoint> ().Line.GetComponent<LineRenderer> ().enabled = true;
+					NewPoint.GetComponent<MovePoint> ().Line.GetComponent<LineRenderer> ().enabled = true;
 					Left = NewPoint;
 				}
 				else
 				{
 					FirstPoint.GetComponent<MovePoint> ().Right = NewPoint;
 					NewPoint.GetComponent<MovePoint> ().Left = FirstPoint;
+					FirstPoint.GetComponent<MovePoint> ().Line.GetComponent<LineRenderer> ().enabled = true;
+					NewPoint.GetComponent<MovePoint> ().Line.GetComponent<LineRenderer> ().enabled = true;
 					Right = NewPoint;
 				}
 				FirstPoint = null; 
@@ -68,12 +72,21 @@ public class PoliceMove : MonoBehaviour {
 			Destroy (FirstPoint);
 			FirstPoint = null;
 		}
+		if (Right == null) 
+		{
+			Debug.Log ("RightNull");
+		}
+		if (Left == null) 
+		{
+			Debug.Log ("LeftNull");
+		}
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.transform.tag == "MovePoint") 
 		{
+			gameObject.transform.position = other.transform.position;
 			if (Right == other.gameObject) 
 			{
 				Left = other.gameObject;
@@ -84,7 +97,6 @@ public class PoliceMove : MonoBehaviour {
 				Right = other.gameObject;
 				Left = other.gameObject.GetComponent<MovePoint> ().Left;
 			}
-			Debug.Log ("hit");
 		}
 	}
 }
