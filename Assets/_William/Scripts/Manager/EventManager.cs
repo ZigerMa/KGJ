@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventManager : MonoBehaviour {
+public class EventManager  {
 
-
-        public delegate void OnEventSendDelegate(int eventId, object data);
+    public delegate void OnEventSendDelegate(int eventId, object data);
 
     public OnEventSendDelegate OnEventSentCallback { get; set; }
 
