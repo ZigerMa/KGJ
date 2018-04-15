@@ -27,10 +27,6 @@ public class Hentai_Move : MonoBehaviour
     {   //最簡單的GetAxis位移
         //float moveHorizontal = Input.GetAxis("Horizontal");
         //float moveVertical = Input.GetAxis("Vertical");
-        if(_Ismove == false)
-        {
-            Application.LoadLevel("SM_Ending");
-        }
         if (_Ismove == true)
         {
             if (Input.GetKey(KeyCode.W))
@@ -51,7 +47,11 @@ public class Hentai_Move : MonoBehaviour
             }
             //Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        } //rb.AddForce(movement * speed);
+        }
+        else
+        {
+            Application.LoadLevel("SM_Ending");
+        }//rb.AddForce(movement * speed);
     }
 
 
