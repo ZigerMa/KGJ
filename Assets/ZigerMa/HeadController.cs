@@ -19,6 +19,7 @@ public class HeadController : MonoBehaviour
     public Body _FirstBody;
     //最後一個小孩之參考引用
     public Body _LastBody;
+    //public  Kid_Move move;
 
     //Step1.先定義速度
     public float speed;//移動之速 (m/s)
@@ -93,7 +94,7 @@ public class HeadController : MonoBehaviour
     /// Move this instance.
     /// </summary>
     private void Move()
-    {
+    {   
         _Timer += Time.deltaTime;
         //判定當前的frame是否該移動
         if (_Timer >= (1f / speed))
@@ -124,6 +125,7 @@ public class HeadController : MonoBehaviour
             transform.Translate(Vector3.forward);//每frame都會移動一單位
             _Timer = 0f;//Reset 計時器
                         //如果小孩身體子部分 就讓它移動
+            //move.Move();
             if (_FirstBody != null)
             {
                 //讓最前面單位移動
