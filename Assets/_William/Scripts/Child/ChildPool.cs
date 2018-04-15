@@ -6,6 +6,8 @@ public class ChildPool : MonoBehaviour {
 
     private GameObject ChildPrefab;
 
+    public Transform[] spwanPoint;
+
     public static bool isReady = false;
 
 	void Start () {

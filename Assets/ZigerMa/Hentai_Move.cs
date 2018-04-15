@@ -33,6 +33,7 @@ public class Hentai_Move : MonoBehaviour
             if (Input.GetKey(KeyCode.W))
             {
                 transform.Translate(Vector3.forward * Time.deltaTime * speed);
+                Main.Instance.m_AudioManager.PlayOneShot("哥哥不要");
             }
             if (Input.GetKey(KeyCode.S))
             {
@@ -41,6 +42,7 @@ public class Hentai_Move : MonoBehaviour
             if (Input.GetKey(KeyCode.A))
             {
                 transform.Translate(Vector3.left * Time.deltaTime * speed);
+                Main.Instance.m_AudioManager.PlayOneShot("哥哥不要2");
             }
             if (Input.GetKey(KeyCode.D))
             {
