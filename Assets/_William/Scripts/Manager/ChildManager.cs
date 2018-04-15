@@ -26,7 +26,7 @@ public class ChildManager  {
 
     public bool GetChildObjBool()
     {
-        if(m_ChildPool.ChildPrefab1 != null)
+        if(ChildPool.isReady)
         {
             return true;
         }

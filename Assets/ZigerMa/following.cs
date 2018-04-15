@@ -15,6 +15,15 @@ public class following : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        move = this.gameObject;
+        target = GameObject.Find("Hentai");
+        if(target == null)
+        {
+            Debug.Log("沒有找到hentai");
+        }else
+        {
+            kid_num = target.GetComponent<Hentai_Move>();
+        }
     }
 
 

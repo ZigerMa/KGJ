@@ -1,16 +1,28 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Main : MonoBehaviour 
 {
     private static bool m_servicesInited = false;
     private MainGameTask m_MainGameTask;
+    public Material[] Skyboxes;
+    public UIController m_UIController;
 
+
+    public Text timerLabel; //#2
+    private string timerText; 
+    public float temp;
+
+    bool gameOn = true;
 
     void Start()
     {
         InitGame();
+        RenderSettings.skybox = Skyboxes[0];
+        RenderSettings.skybox.SetFloat("_Rotation", 0);
     }
 
 	private void InitGame()
@@ -31,6 +43,32 @@ public class Main : MonoBehaviour
     private void TestMethod()
     {
 
+    }
+
+
+    void Update()
+    {
+        if(temp > 0 && gameOn)
+        {
+            temp -= Time.deltaTime; //#3
+            TimeSpan timeSpan = TimeSpan.FromSeconds(temp); //#4
+
+            timerText = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds); //#5
+            timerLabel.text = timerText; //#6 
+        }else
+        {
+            GameOver();
+            gameOn = false;
+            Debug.Log("遊戲時間到了");
+        }
+      
+
+    }
+
+    void GameOver()
+    {
+        Debug.Log("遊戲結束");
+        m_UIController.GameOver();
     }
 
 }
