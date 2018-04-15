@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{65E9FB24-479A-AB4F-F31F-678877251BE7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_William/Scripts/UIController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Main.unity">
     <Files>
       <File FileName="Assets/_William/Scripts/Main.cs" Line="1" Column="1" />
       <File FileName="Assets/_William/Scripts/Manager/ChildManager.cs" Line="26" Column="5" />
@@ -10,7 +10,8 @@
       <File FileName="Assets/ZigerMa/following.cs" Line="1" Column="1" />
       <File FileName="Assets/ZigerMa/Hentai_Move.cs" Line="1" Column="1" />
       <File FileName="Assets/FarlandSkies/Demo/Scripts/Skybox/SkyboxChanger.cs" Line="1" Column="1" />
-      <File FileName="Assets/_William/Scripts/UIController.cs" Line="26" Column="18" />
+      <File FileName="Assets/_William/Scripts/UIController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Main.unity" Line="2244" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
