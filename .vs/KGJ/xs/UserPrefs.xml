@@ -1,12 +1,16 @@
 ﻿<Properties StartupConfiguration="{65E9FB24-479A-AB4F-F31F-678877251BE7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/JohnnyLiu/Script/PoliceMove.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_William/Scripts/Main.cs">
     <Files>
-      <File FileName="Assets/_William/Scripts/Main.cs" Line="24" Column="13" />
-      <File FileName="Assets/_William/Scripts/Manager/ChildManager.cs" Line="38" Column="15" />
-      <File FileName="Assets/_William/Scripts/Child/ChildPool.cs" Line="38" Column="29" />
+      <File FileName="Assets/_William/Scripts/Main.cs" Line="12" Column="39" />
+      <File FileName="Assets/_William/Scripts/Manager/ChildManager.cs" Line="31" Column="25" />
+      <File FileName="Assets/_William/Scripts/Child/ChildPool.cs" Line="20" Column="54" />
       <File FileName="Assets/_William/Scripts/MainGameTask.cs" Line="7" Column="31" />
       <File FileName="Assets/_William/Scripts/Manager/EventManager.cs" Line="7" Column="1" />
-      <File FileName="Assets/JohnnyLiu/Script/PoliceMove.cs" Line="1" Column="1" />
+      <File FileName="Assets/JohnnyLiu/Script/PoliceMove.cs" Line="11" Column="30" />
+      <File FileName="Assets/ZigerMa/following.cs" Line="25" Column="58" />
+      <File FileName="Assets/ZigerMa/Hentai_Move.cs" Line="1" Column="1" />
+      <File FileName="Assets/FarlandSkies/Demo/Scripts/Skybox/SkyboxChanger.cs" Line="13" Column="41" />
+      <File FileName="Assets/_William/Scripts/UIController.cs" Line="5" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

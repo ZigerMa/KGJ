@@ -6,21 +6,10 @@ public class ChildPool : MonoBehaviour {
 
     private GameObject ChildPrefab;
 
-    public GameObject ChildPrefab1
-    {
-        get
-        {
-            return ChildPrefab;
-        }
-
-        set
-        {
-            ChildPrefab = value;
-        }
-    }
+    public static bool isReady = false;
 
 	void Start () {
-        StartCoroutine(LoadChildPrefab());
+        //StartCoroutine(LoadChildPrefab());
     }
 
     IEnumerator LoadChildPrefab()
@@ -28,13 +17,13 @@ public class ChildPool : MonoBehaviour {
         ResourceRequest request = Resources.LoadAsync("Child/ChildObj");
         yield return request;
         Debug.Log("LoadChildPrefab Succeeded");
-        ChildPrefab1 = request.asset as GameObject;
+        //ChildPrefab1 = request.asset as GameObject;
         //ChildPrefab.transform.parent = this.transform;
     }
 
     public GameObject GetChild()
     {
         Debug.Log("ShowChild");
-        return ChildPrefab1;
+        return ChildPrefab;
     }
 }
