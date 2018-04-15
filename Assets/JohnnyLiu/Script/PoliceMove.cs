@@ -29,6 +29,7 @@ public class PoliceMove : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (KeyCode.Space)) 
 		{
+            PlaySound();
 			if (FirstPoint == null)
 			{
 				GameObject NewPoint = Instantiate (Point, transform.position, transform.rotation);
@@ -99,4 +100,9 @@ public class PoliceMove : MonoBehaviour {
 			}
 		}
 	}
+
+    void PlaySound()
+    {
+        Main.Instance.m_AudioManager.PlayOneShot("放封鎖點");
+    }
 }
