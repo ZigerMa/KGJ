@@ -13,6 +13,7 @@ public class MovePoint : MonoBehaviour {
 
 	void Start()
 	{
+        move = GameObject.Find("Billy").GetComponent<Hentai_Move>();
 		Line.transform.position = Vector3.zero;
 	}
 

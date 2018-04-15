@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641275, b: 0.57481736, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1385,6 +1385,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ad59bb05219f84deaa5a85145ce96d9d, type: 2}
+    - target: {fileID: 1221012136367672, guid: aebed1ee2db5a4735af37c540c24bc4a, type: 2}
+      propertyPath: m_Name
+      value: Billy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aebed1ee2db5a4735af37c540c24bc4a, type: 2}
   m_IsPrefabParent: 0
@@ -2222,6 +2226,20 @@ MonoBehaviour:
   speed: 5
   rb: {fileID: 421579338}
   kid_num: 0
+  _Ismove: 1
+--- !u!136 &421579340
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421579335}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.9498043
+  m_Height: 4.7145944
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.8572972, z: -0.4498043}
 --- !u!1 &451804776
 GameObject:
   m_ObjectHideFlags: 0

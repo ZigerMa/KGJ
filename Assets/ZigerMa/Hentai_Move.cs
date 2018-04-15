@@ -7,7 +7,8 @@ public class Hentai_Move : MonoBehaviour
     //public GameObject hentai;
     public float speed;
     public Rigidbody rb;
-    public  bool kid_num,_Ismove=true;
+    public  bool kid_num;
+    public bool _Ismove;
 
 
 
