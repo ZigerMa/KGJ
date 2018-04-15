@@ -6,10 +6,30 @@ using UnityEngine.UI;
 
 public class Main : MonoBehaviour 
 {
+    private static Main s_Instance;
+
+    public static Main Instance
+    {
+        get
+        {
+            if (s_Instance == null)
+            {
+                s_Instance = FindObjectOfType(typeof(Main)) as Main;
+                if (s_Instance == null)
+                {
+                    GameObject go = new GameObject("Main");
+                    s_Instance = go.AddComponent<Main>();
+                }
+            }
+            return s_Instance;
+        }
+    }
+
     private static bool m_servicesInited = false;
     private MainGameTask m_MainGameTask;
     public Material[] Skyboxes;
     public UIController m_UIController;
+    public AudioManager m_AudioManager;
 
 
     public Text timerLabel; //#2
@@ -20,6 +40,8 @@ public class Main : MonoBehaviour
 
     void Start()
     {
+        //if (Instance != this) Destroy(this);
+        s_Instance = this;
         InitGame();
         RenderSettings.skybox = Skyboxes[0];
         RenderSettings.skybox.SetFloat("_Rotation", 0);
