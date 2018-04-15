@@ -29,7 +29,6 @@ public class PoliceMove : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (KeyCode.Space)) 
 		{
-            PlaySound();
 			if (FirstPoint == null)
 			{
 				GameObject NewPoint = Instantiate (Point, transform.position, transform.rotation);
@@ -38,9 +37,11 @@ public class PoliceMove : MonoBehaviour {
 				Left.GetComponent<MovePoint> ().Right = NewPoint;
 				Right.GetComponent<MovePoint> ().Left = NewPoint;
 				FirstPoint = NewPoint;
+                PlaySoundfrist();
 			} 
 			else 
 			{
+                PlaySoundline();
 				GameObject NewPoint = Instantiate (Point, transform.position, transform.rotation);
 				NewPoint.GetComponent<MovePoint> ().Right = Right;
 				NewPoint.GetComponent<MovePoint> ().Left = Left;
@@ -64,6 +65,7 @@ public class PoliceMove : MonoBehaviour {
 				}
 				FirstPoint = null; 
 				//連線
+
 			}
 		}
 		if (Input.GetKeyDown (KeyCode.C)) 
@@ -101,8 +103,12 @@ public class PoliceMove : MonoBehaviour {
 		}
 	}
 
-    void PlaySound()
+    void PlaySoundfrist()
     {
         Main.Instance.m_AudioManager.PlayOneShot("放封鎖點");
+    }
+    void PlaySoundline()
+    {
+        Main.Instance.m_AudioManager.PlayOneShot("拉封鎖線");
     }
 }

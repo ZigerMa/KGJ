@@ -1,17 +1,16 @@
 ﻿<Properties StartupConfiguration="{65E9FB24-479A-AB4F-F31F-678877251BE7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_William/Scripts/AudioManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_William/Scripts/UIController.cs">
     <Files>
-      <File FileName="Assets/_William/Scripts/Main.cs" Line="14" Column="5" />
-      <File FileName="Assets/_William/Scripts/Manager/ChildManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/_William/Scripts/Main.cs" Line="1" Column="1" />
+      <File FileName="Assets/_William/Scripts/Manager/ChildManager.cs" Line="26" Column="5" />
       <File FileName="Assets/_William/Scripts/Child/ChildPool.cs" Line="1" Column="1" />
       <File FileName="Assets/_William/Scripts/MainGameTask.cs" Line="7" Column="31" />
       <File FileName="Assets/_William/Scripts/Manager/EventManager.cs" Line="7" Column="1" />
-      <File FileName="Assets/JohnnyLiu/Script/PoliceMove.cs" Line="11" Column="30" />
+      <File FileName="Assets/JohnnyLiu/Script/PoliceMove.cs" Line="1" Column="1" />
       <File FileName="Assets/ZigerMa/following.cs" Line="1" Column="1" />
       <File FileName="Assets/ZigerMa/Hentai_Move.cs" Line="1" Column="1" />
       <File FileName="Assets/FarlandSkies/Demo/Scripts/Skybox/SkyboxChanger.cs" Line="1" Column="1" />
-      <File FileName="Assets/_William/Scripts/UIController.cs" Line="1" Column="1" />
-      <File FileName="Assets/_William/Scripts/AudioManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/_William/Scripts/UIController.cs" Line="26" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

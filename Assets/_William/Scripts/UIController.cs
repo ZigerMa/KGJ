@@ -23,6 +23,8 @@ public class UIController : MonoBehaviour {
         if(GameOverUI != null)
         {
             GameOverUI.SetActive(true);
+            Main.Instance.m_AudioManager.PlayOneShot("警笛");
+            Main.Instance.m_AudioManager.PlayOneShot("母湯歐");
         }
     }
 }
