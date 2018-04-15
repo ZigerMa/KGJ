@@ -20,12 +20,12 @@ public class Main : MonoBehaviour
             Services.Set<EventManager>(new EventManager());
             Services.Set<PoliceManager>(new PoliceManager());
             Services.Set<HentaiManager>(new HentaiManager());
-            Services.Set<ChildManager>(new ChildManager());
+            //Services.Set<ChildManager>(new ChildManager());
 
 
             m_servicesInited = true;
         }
-        m_MainGameTask = gameObject.AddComponent<MainGameTask>();
+        //m_MainGameTask = gameObject.AddComponent<MainGameTask>();
     }
 
     private void TestMethod()
