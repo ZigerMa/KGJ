@@ -30,7 +30,7 @@ public class Main : MonoBehaviour
     public Material[] Skyboxes;
     public UIController m_UIController;
     public AudioManager m_AudioManager;
-
+    public Hentai_Move m_hen;
 
     public Text timerLabel; //#2
     private string timerText; 
@@ -90,7 +90,18 @@ public class Main : MonoBehaviour
     void GameOver()
     {
         Debug.Log("遊戲結束");
-        m_UIController.GameOver();
+        if(m_hen.kid_num)
+        {
+            m_UIController.GameOver();
+        }else
+        {
+            m_UIController.TrueEnd();
+        }
     }
 
+
+    public void ImmediateLoadingScene(string sceneName)
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+    }
 }

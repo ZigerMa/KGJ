@@ -51,7 +51,8 @@ public class Hentai_Move : MonoBehaviour
         }
         else
         {
-            Application.LoadLevel("SM_Ending");
+            Debug.Log("GameOver!!");
+            Main.Instance.m_UIController.GameOver();
         }//rb.AddForce(movement * speed);
     }
 
