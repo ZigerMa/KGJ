@@ -9,6 +9,7 @@ public class following : MonoBehaviour
     public Rigidbody rb;
     public float dis;
     public bool _isclose=false;
+    public Hentai_Move kid_num;
     
 
     void Start()
@@ -39,7 +40,7 @@ public class following : MonoBehaviour
             move.transform.rotation = Quaternion.Slerp(move.transform.rotation, MoveRotation, Time.deltaTime * MoveRotataionSpeed);
             move.transform.rotation = MoveRotation;
             transform.position += transform.forward * MoveRotataionSpeed * Time.deltaTime;
-           
+            kid_num.kid_num =true;
             //Quaternion MoveRotation = Quaternion.LookRotation(target.transform.position - move.transform.position, Vector3.up);//視差向量
             //move.transform.rotation = Quaternion.Slerp(move.transform.rotation, MoveRotation, Time.deltaTime * MoveRotataionSpeed);//轉向視差向量
             //rb.AddForce(transform.forward * MoveRotataionSpeed * Time.deltaTime);
