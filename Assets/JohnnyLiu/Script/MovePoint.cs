@@ -9,6 +9,7 @@ public class MovePoint : MonoBehaviour {
 	public GameObject RightRay;
 	public GameObject LeftRay;
 	public bool isBase;
+    public Hentai_Move move;
 
 	void Start()
 	{
@@ -55,6 +56,7 @@ public class MovePoint : MonoBehaviour {
 				{
 					Destroy (Right.GetComponent<MovePoint>().Left);
 					Destroy (Right);
+                    move._Ismove = false;
 					//Do Something.
 				}
 			}
